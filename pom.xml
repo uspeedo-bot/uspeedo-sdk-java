@@ -7,7 +7,7 @@
     <groupId>com.uspeedo</groupId>
     <artifactId>uspeedo-sdk-java</artifactId>
     <packaging>pom</packaging>
-    <version>1.0.0-release</version>
+    <version>1.0.0-SNAPSHOT</version>
     <modules>
         <module>uspeedo-sdk-java-common</module>
         <module>uspeedo-sdk-java-email</module>
@@ -41,12 +41,12 @@
 
     <distributionManagement>
         <snapshotRepository>
-            <id>sonatype-nexus-uspeedo</id>
-            <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
+            <id>ossrh</id>
+            <url>https://s01.oss.sonatype.org/content/repositories/snapshots</url>
         </snapshotRepository>
         <repository>
-            <id>sonatype-nexus-uspeedo</id>
-            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+            <id>ossrh</id>
+            <url>https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/</url>
         </repository>
     </distributionManagement>
 
