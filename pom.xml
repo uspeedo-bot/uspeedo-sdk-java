@@ -7,7 +7,7 @@
     <groupId>com.uspeedo</groupId>
     <artifactId>uspeedo-sdk-java</artifactId>
     <packaging>pom</packaging>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>1.0.0-release</version>
     <modules>
         <module>uspeedo-sdk-java-common</module>
         <module>uspeedo-sdk-java-email</module>
