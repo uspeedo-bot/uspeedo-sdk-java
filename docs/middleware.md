@@ -1,0 +1,49 @@
+# Request middleware
+
+Learn how to intercept requests initiated by the SDK and add additional logic in unity.
+
+USpeedo SDK provides request middleware features for requests.
+
+This feature allows adding custom logic during the request/response life cycle.
+
+The following is an example of logging middleware:
+
+```java
+package com.uspeedo.common.middlewares;
+
+import com.uspeedo.common.exception.USpeedoException;
+import com.uspeedo.common.middleware.BaseMiddleware;
+import com.uspeedo.common.middleware.Context;
+import com.uspeedo.common.middleware.Middleware;
+import com.uspeedo.common.request.Request;
+import com.uspeedo.common.response.Response;
+import com.google.gson.Gson;
+import org.slf4j.Logger;
+
+public class LogMiddleware extends BaseMiddleware implements Middleware {
+
+    @Override
+    public Request handleRequest(Context context) throws USpeedoException {
+        Logger logger = context.getConfig().getLogger();
+        logger.info(new Gson().toJson(context.getRequest().encode()));
+        return super.handleRequest(context);
+    }
+
+    @Override
+    public Response handleResponse(Context context) throws USpeedoException {
+        Logger logger = context.getConfig().getLogger();
+        logger.info(String.format(
+                "[%s] %s", context.getResponse().getRequestId(),
+                new Gson().toJson(context.getResponse())
+        ));
+        return super.handleResponse(context);
+    }
+
+    @Override
+    public void handleException(Context context) throws USpeedoException {
+        Logger logger = context.getConfig().getLogger();
+        logger.error(new Gson().toJson(context.getException().getMessage()));
+        super.handleException(context);
+    }
+}
+```
