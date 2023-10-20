@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.uspeedo.whatsapp.models;
+package com.uspeedo.asms.models;
 
 import java.util.List;
 
@@ -23,44 +23,25 @@ import com.google.gson.annotations.SerializedName;
 
 import com.uspeedo.common.response.Response;
 
-public class Console__data_console_uploadMediaResponse extends Response {
+public class ApplyUSMSTemplateResp extends Response {
 
     
         
     /**
      * 
      */
-    @SerializedName("Data")
-    private Console__uploadMediaResponse data;
+    @SerializedName("TemplateId")
+    private String templateId;
         
     
-    public Console__uploadMediaResponse getData() {
-        return data;
+    public String getTemplateId() {
+        return templateId;
     }
 
-    public void setData(Console__uploadMediaResponse data) {
-        this.data = data;
+    public void setTemplateId(String templateId) {
+        this.templateId = templateId;
     }
     
-        public static class Console__uploadMediaResponse extends Response {
-            
-        
-    /**
-     * 
-     */
-    @SerializedName("Id")
-    private String id;
-        
-    
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
-    }
-    
-        }
 }
 
 

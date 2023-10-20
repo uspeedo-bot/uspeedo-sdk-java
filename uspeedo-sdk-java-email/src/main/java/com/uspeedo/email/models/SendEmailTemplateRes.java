@@ -23,16 +23,8 @@ import com.google.gson.annotations.SerializedName;
 
 import com.uspeedo.common.response.Response;
 
-public class Action__SendEmailTemplateResponse extends Response {
+public class SendEmailTemplateRes extends Response {
 
-    
-        
-    /**
-     * 
-     */
-    @SerializedName("FailContent")
-    private List<Action__FailedTargetEmail> failContent;
-        
     
         
     /**
@@ -50,13 +42,13 @@ public class Action__SendEmailTemplateResponse extends Response {
     private Integer successCount;
         
     
-    public List<Action__FailedTargetEmail> getFailContent() {
-        return failContent;
-    }
-
-    public void setFailContent(List<Action__FailedTargetEmail> failContent) {
-        this.failContent = failContent;
-    }
+        
+    /**
+     * 
+     */
+    @SerializedName("FailContent")
+    private List<FailedTargetEmail> failContent;
+        
     
     public String getSessionNo() {
         return sessionNo;
@@ -74,16 +66,16 @@ public class Action__SendEmailTemplateResponse extends Response {
         this.successCount = successCount;
     }
     
-        public static class Action__FailedTargetEmail extends Response {
-            
-        
-    /**
-     * variableName{##}variableValue
-     */
-    @SerializedName("TemplateVariableParams")
-    private List<String> templateVariableParams;
-        
+    public List<FailedTargetEmail> getFailContent() {
+        return failContent;
+    }
+
+    public void setFailContent(List<FailedTargetEmail> failContent) {
+        this.failContent = failContent;
+    }
     
+        public static class FailedTargetEmail extends Response {
+            
         
     /**
      * 
@@ -100,13 +92,13 @@ public class Action__SendEmailTemplateResponse extends Response {
     private String failureReason;
         
     
-    public List<String> getTemplateVariableParams() {
-        return templateVariableParams;
-    }
-
-    public void setTemplateVariableParams(List<String> templateVariableParams) {
-        this.templateVariableParams = templateVariableParams;
-    }
+        
+    /**
+     * variableName{##}variableValue
+     */
+    @SerializedName("TemplateVariableParams")
+    private List<String> templateVariableParams;
+        
     
     public String getEmailAddress() {
         return emailAddress;
@@ -122,6 +114,14 @@ public class Action__SendEmailTemplateResponse extends Response {
 
     public void setFailureReason(String failureReason) {
         this.failureReason = failureReason;
+    }
+    
+    public List<String> getTemplateVariableParams() {
+        return templateVariableParams;
+    }
+
+    public void setTemplateVariableParams(List<String> templateVariableParams) {
+        this.templateVariableParams = templateVariableParams;
     }
     
         }

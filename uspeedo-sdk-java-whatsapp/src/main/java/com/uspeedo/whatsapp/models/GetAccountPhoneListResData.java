@@ -23,7 +23,7 @@ import com.google.gson.annotations.SerializedName;
 
 import com.uspeedo.common.response.Response;
 
-public class Console__data_console_getAccountAppKeyResponse extends Response {
+public class GetAccountPhoneListResData extends Response {
 
     
         
@@ -31,38 +31,54 @@ public class Console__data_console_getAccountAppKeyResponse extends Response {
      * 
      */
     @SerializedName("Data")
-    private Console__getAccountAppKeyResponse data;
+    private GetAccountPhoneListRes data;
         
     
-    public Console__getAccountAppKeyResponse getData() {
+    public GetAccountPhoneListRes getData() {
         return data;
     }
 
-    public void setData(Console__getAccountAppKeyResponse data) {
+    public void setData(GetAccountPhoneListRes data) {
         this.data = data;
     }
     
-        public static class Console__getAccountAppKeyResponse extends Response {
+        public static class GetAccountPhoneListRes extends Response {
             
         
     /**
      * 
      */
     @SerializedName("PhoneList")
-    private List<Console__getAccountPhoneListResponseItem> phoneList;
+    private List<GetAccountPhoneListResItem> phoneList;
         
     
-    public List<Console__getAccountPhoneListResponseItem> getPhoneList() {
+    public List<GetAccountPhoneListResItem> getPhoneList() {
         return phoneList;
     }
 
-    public void setPhoneList(List<Console__getAccountPhoneListResponseItem> phoneList) {
+    public void setPhoneList(List<GetAccountPhoneListResItem> phoneList) {
         this.phoneList = phoneList;
     }
     
         }
-        public static class Console__getAccountPhoneListResponseItem extends Response {
+        public static class GetAccountPhoneListResItem extends Response {
             
+        
+    /**
+     * 
+     */
+    @SerializedName("Country")
+    private String country;
+        
+    
+        
+    /**
+     * 
+     */
+    @SerializedName("DisplayName")
+    private String displayName;
+        
+    
         
     /**
      * 
@@ -95,21 +111,21 @@ public class Console__data_console_getAccountAppKeyResponse extends Response {
     private String status;
         
     
-        
-    /**
-     * 
-     */
-    @SerializedName("Country")
-    private String country;
-        
+    public String getCountry() {
+        return country;
+    }
+
+    public void setCountry(String country) {
+        this.country = country;
+    }
     
-        
-    /**
-     * 
-     */
-    @SerializedName("DisplayName")
-    private String displayName;
-        
+    public String getDisplayName() {
+        return displayName;
+    }
+
+    public void setDisplayName(String displayName) {
+        this.displayName = displayName;
+    }
     
     public String getMessagingLimit() {
         return messagingLimit;
@@ -141,22 +157,6 @@ public class Console__data_console_getAccountAppKeyResponse extends Response {
 
     public void setStatus(String status) {
         this.status = status;
-    }
-    
-    public String getCountry() {
-        return country;
-    }
-
-    public void setCountry(String country) {
-        this.country = country;
-    }
-    
-    public String getDisplayName() {
-        return displayName;
-    }
-
-    public void setDisplayName(String displayName) {
-        this.displayName = displayName;
     }
     
         }

@@ -20,43 +20,43 @@ import com.uspeedo.common.exception.USpeedoException;
         
         
         
-import com.uspeedo.whatsapp.models.Client__GetMessageSummaryRequest;
-import com.uspeedo.whatsapp.models.Console__data_console_GetMessageSummaryResponse;
+import com.uspeedo.whatsapp.models.GetMediaReq;
+import com.uspeedo.whatsapp.models.GetMediaResData;
         
         
         
-import com.uspeedo.whatsapp.models.Console__getTemplateRequest;
-import com.uspeedo.whatsapp.models.Console__data_console_GetTemplatesResponse;
+import com.uspeedo.whatsapp.models.GetMessageSummaryReq;
+import com.uspeedo.whatsapp.models.GetMessageSummaryResData;
         
         
         
-import com.uspeedo.whatsapp.models.Console__sendMessageRequest;
-import com.uspeedo.whatsapp.models.Console__data_console_sendMessageResponse;
+import com.uspeedo.whatsapp.models.GetTemplatesReq;
+import com.uspeedo.whatsapp.models.GetTemplatesResData;
         
         
         
-import com.uspeedo.whatsapp.models.Console__uploadMediaRequest;
-import com.uspeedo.whatsapp.models.Console__data_console_uploadMediaResponse;
+import com.uspeedo.whatsapp.models.SendWhatsappMessageReq;
+import com.uspeedo.whatsapp.models.SendWhatsappMessageResData;
         
         
         
-import com.uspeedo.whatsapp.models.Console__deleteMediaRequest;
-import com.uspeedo.whatsapp.models.Common__Empty;
+import com.uspeedo.whatsapp.models.UploadMediaReq;
+import com.uspeedo.whatsapp.models.UploadMediaResData;
         
         
         
-import com.uspeedo.whatsapp.models.Console__deleteTemplateRequest;
-import com.uspeedo.whatsapp.models.Common__Empty;
+import com.uspeedo.whatsapp.models.DeleteMediaReq;
+import com.uspeedo.whatsapp.models.Empty;
+        
+        
+        
+import com.uspeedo.whatsapp.models.DeleteTemplateReq;
+import com.uspeedo.whatsapp.models.Empty;
         
         
         
 import com.uspeedo.whatsapp.models.GetAccountPhoneListRequest;
-import com.uspeedo.whatsapp.models.Console__data_console_getAccountAppKeyResponse;
-        
-        
-        
-import com.uspeedo.whatsapp.models.Console__getMediaRequest;
-import com.uspeedo.whatsapp.models.Console__data_console_getMediaResponse;
+import com.uspeedo.whatsapp.models.GetAccountPhoneListResData;
 
 /**
  * This client is used to call actions of **WhatsApp** service
@@ -69,12 +69,25 @@ public interface WhatsAppClientInterface extends Client {
         
         
     /**
+     * GetMedia - 
+     *
+     * @param request Request object
+     * @throws USpeedoException Exception
+     */
+    public GetMediaResData getMedia(GetMediaReq request) throws USpeedoException;
+        
+        
+        
+        
+        
+        
+    /**
      * GetMessageSummary - 
      *
      * @param request Request object
      * @throws USpeedoException Exception
      */
-    public Console__data_console_GetMessageSummaryResponse getMessageSummary(Client__GetMessageSummaryRequest request) throws USpeedoException;
+    public GetMessageSummaryResData getMessageSummary(GetMessageSummaryReq request) throws USpeedoException;
         
         
         
@@ -87,7 +100,7 @@ public interface WhatsAppClientInterface extends Client {
      * @param request Request object
      * @throws USpeedoException Exception
      */
-    public Console__data_console_GetTemplatesResponse getTemplates(Console__getTemplateRequest request) throws USpeedoException;
+    public GetTemplatesResData getTemplates(GetTemplatesReq request) throws USpeedoException;
         
         
         
@@ -100,7 +113,7 @@ public interface WhatsAppClientInterface extends Client {
      * @param request Request object
      * @throws USpeedoException Exception
      */
-    public Console__data_console_sendMessageResponse sendWhatsappMessage(Console__sendMessageRequest request) throws USpeedoException;
+    public SendWhatsappMessageResData sendWhatsappMessage(SendWhatsappMessageReq request) throws USpeedoException;
         
         
         
@@ -113,7 +126,7 @@ public interface WhatsAppClientInterface extends Client {
      * @param request Request object
      * @throws USpeedoException Exception
      */
-    public Console__data_console_uploadMediaResponse uploadMedia(Console__uploadMediaRequest request) throws USpeedoException;
+    public UploadMediaResData uploadMedia(UploadMediaReq request) throws USpeedoException;
         
         
         
@@ -126,7 +139,7 @@ public interface WhatsAppClientInterface extends Client {
      * @param request Request object
      * @throws USpeedoException Exception
      */
-    public Common__Empty deleteMedia(Console__deleteMediaRequest request) throws USpeedoException;
+    public Empty deleteMedia(DeleteMediaReq request) throws USpeedoException;
         
         
         
@@ -139,7 +152,7 @@ public interface WhatsAppClientInterface extends Client {
      * @param request Request object
      * @throws USpeedoException Exception
      */
-    public Common__Empty deleteTemplate(Console__deleteTemplateRequest request) throws USpeedoException;
+    public Empty deleteTemplate(DeleteTemplateReq request) throws USpeedoException;
         
         
         
@@ -152,18 +165,5 @@ public interface WhatsAppClientInterface extends Client {
      * @param request Request object
      * @throws USpeedoException Exception
      */
-    public Console__data_console_getAccountAppKeyResponse getAccountPhoneList(GetAccountPhoneListRequest request) throws USpeedoException;
-        
-        
-        
-        
-        
-        
-    /**
-     * GetMedia - 
-     *
-     * @param request Request object
-     * @throws USpeedoException Exception
-     */
-    public Console__data_console_getMediaResponse getMedia(Console__getMediaRequest request) throws USpeedoException;
+    public GetAccountPhoneListResData getAccountPhoneList(GetAccountPhoneListRequest request) throws USpeedoException;
 }

@@ -23,28 +23,21 @@ import com.uspeedo.common.request.Request;
 import com.uspeedo.common.annotation.NotEmpty;
 import com.uspeedo.common.annotation.USpeedoParam;
 
-public class Console__getTemplateRequest extends Request {
+public class SendWhatsappMessageReq extends Request {
 
     
         
     /**
-     * 
+     * message type
      */
-    @USpeedoParam("After")
-    private String after;
+    @NotEmpty
+    @USpeedoParam("Type")
+    private String type;
         
     
         
     /**
-     * 
-     */
-    @USpeedoParam("Before")
-    private String before;
-        
-    
-        
-    /**
-     * 
+     * send phone number
      */
     @NotEmpty
     @USpeedoParam("BusinessPhone")
@@ -53,34 +46,28 @@ public class Console__getTemplateRequest extends Request {
     
         
     /**
-     * 
+     * message content in json
      */
-    @USpeedoParam("Limit")
-    private Integer limit;
+    @NotEmpty
+    @USpeedoParam("Content")
+    private String content;
         
     
         
     /**
-     * 
+     * target phone number
      */
-    @USpeedoParam("Name")
-    private String name;
+    @NotEmpty
+    @USpeedoParam("To")
+    private String to;
         
     
-    public String getAfter() {
-        return after;
+    public String getType() {
+        return type;
     }
 
-    public void setAfter(String after) {
-        this.after = after;
-    }
-    
-    public String getBefore() {
-        return before;
-    }
-
-    public void setBefore(String before) {
-        this.before = before;
+    public void setType(String type) {
+        this.type = type;
     }
     
     public String getBusinessPhone() {
@@ -91,20 +78,20 @@ public class Console__getTemplateRequest extends Request {
         this.businessPhone = businessPhone;
     }
     
-    public Integer getLimit() {
-        return limit;
+    public String getContent() {
+        return content;
     }
 
-    public void setLimit(Integer limit) {
-        this.limit = limit;
+    public void setContent(String content) {
+        this.content = content;
     }
     
-    public String getName() {
-        return name;
+    public String getTo() {
+        return to;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setTo(String to) {
+        this.to = to;
     }
     
 }

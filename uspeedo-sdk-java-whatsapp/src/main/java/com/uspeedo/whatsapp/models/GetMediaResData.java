@@ -23,7 +23,7 @@ import com.google.gson.annotations.SerializedName;
 
 import com.uspeedo.common.response.Response;
 
-public class Console__data_console_getMediaResponse extends Response {
+public class GetMediaResData extends Response {
 
     
         
@@ -31,18 +31,18 @@ public class Console__data_console_getMediaResponse extends Response {
      * 
      */
     @SerializedName("Data")
-    private Console__getMediaResponse data;
+    private GetMediaRes data;
         
     
-    public Console__getMediaResponse getData() {
+    public GetMediaRes getData() {
         return data;
     }
 
-    public void setData(Console__getMediaResponse data) {
+    public void setData(GetMediaRes data) {
         this.data = data;
     }
     
-        public static class Console__getMediaResponse extends Response {
+        public static class GetMediaRes extends Response {
             
         
     /**
