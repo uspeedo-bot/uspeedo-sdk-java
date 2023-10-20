@@ -5,12 +5,12 @@
 
 ## Chinese Guide
 
-* [快速开始](docs/quickstart.md)
-* [通用配置](docs/configure.md)
-* [错误处理](docs/error.md)
-* [请求中间件](docs/middleware.md)
-* [泛化调用](docs/generic.md)
+* [Quick start](docs/quickstart.md)
+* [Common configuration](docs/configure.md)
+* [Error handing](docs/error.md)
+* [Middleware](docs/middleware.md)
+* [Generalized](docs/generic.md)
 
 ## Examples
 
-- [消息](examples/sms)
+- [whatsapp](examples/whatsapp)

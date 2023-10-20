@@ -23,9 +23,44 @@ import com.google.gson.annotations.SerializedName;
 
 import com.uspeedo.common.response.Response;
 
-public class Common__Empty extends Response {
+public class SendWhatsappMessageResData extends Response {
 
     
+        
+    /**
+     * 
+     */
+    @SerializedName("Data")
+    private SendWhatsappMessageRes data;
+        
+    
+    public SendWhatsappMessageRes getData() {
+        return data;
+    }
+
+    public void setData(SendWhatsappMessageRes data) {
+        this.data = data;
+    }
+    
+        public static class SendWhatsappMessageRes extends Response {
+            
+        
+    /**
+     * 
+     */
+    @SerializedName("MessageId")
+    private String messageId;
+        
+    
+    public String getMessageId() {
+        return messageId;
+    }
+
+    public void setMessageId(String messageId) {
+        this.messageId = messageId;
+    }
+    
+        }
 }
 
 

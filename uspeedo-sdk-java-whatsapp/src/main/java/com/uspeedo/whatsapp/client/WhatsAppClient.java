@@ -22,43 +22,43 @@ import com.uspeedo.common.exception.USpeedoException;
         
         
         
-import com.uspeedo.whatsapp.models.Client__GetMessageSummaryRequest;
-import com.uspeedo.whatsapp.models.Console__data_console_GetMessageSummaryResponse;
+import com.uspeedo.whatsapp.models.GetMediaReq;
+import com.uspeedo.whatsapp.models.GetMediaResData;
         
         
         
-import com.uspeedo.whatsapp.models.Console__getTemplateRequest;
-import com.uspeedo.whatsapp.models.Console__data_console_GetTemplatesResponse;
+import com.uspeedo.whatsapp.models.GetMessageSummaryReq;
+import com.uspeedo.whatsapp.models.GetMessageSummaryResData;
         
         
         
-import com.uspeedo.whatsapp.models.Console__sendMessageRequest;
-import com.uspeedo.whatsapp.models.Console__data_console_sendMessageResponse;
+import com.uspeedo.whatsapp.models.GetTemplatesReq;
+import com.uspeedo.whatsapp.models.GetTemplatesResData;
         
         
         
-import com.uspeedo.whatsapp.models.Console__uploadMediaRequest;
-import com.uspeedo.whatsapp.models.Console__data_console_uploadMediaResponse;
+import com.uspeedo.whatsapp.models.SendWhatsappMessageReq;
+import com.uspeedo.whatsapp.models.SendWhatsappMessageResData;
         
         
         
-import com.uspeedo.whatsapp.models.Console__deleteMediaRequest;
-import com.uspeedo.whatsapp.models.Common__Empty;
+import com.uspeedo.whatsapp.models.UploadMediaReq;
+import com.uspeedo.whatsapp.models.UploadMediaResData;
         
         
         
-import com.uspeedo.whatsapp.models.Console__deleteTemplateRequest;
-import com.uspeedo.whatsapp.models.Common__Empty;
+import com.uspeedo.whatsapp.models.DeleteMediaReq;
+import com.uspeedo.whatsapp.models.Empty;
+        
+        
+        
+import com.uspeedo.whatsapp.models.DeleteTemplateReq;
+import com.uspeedo.whatsapp.models.Empty;
         
         
         
 import com.uspeedo.whatsapp.models.GetAccountPhoneListRequest;
-import com.uspeedo.whatsapp.models.Console__data_console_getAccountAppKeyResponse;
-        
-        
-        
-import com.uspeedo.whatsapp.models.Console__getMediaRequest;
-import com.uspeedo.whatsapp.models.Console__data_console_getMediaResponse;
+import com.uspeedo.whatsapp.models.GetAccountPhoneListResData;
 
 /**
  * This client is used to call actions of **WhatsApp** service
@@ -74,14 +74,30 @@ public class WhatsAppClient extends DefaultClient implements WhatsAppClientInter
         
         
         /**
+         * GetMedia - 
+         *
+         * @param request Request object
+         * @throws USpeedoException Exception
+         */
+        public GetMediaResData getMedia(GetMediaReq request) throws USpeedoException {
+            request.setAction("GetMedia");
+            return (GetMediaResData) this.invoke(request, GetMediaResData.class);
+        }
+        
+        
+        
+        
+        
+        
+        /**
          * GetMessageSummary - 
          *
          * @param request Request object
          * @throws USpeedoException Exception
          */
-        public Console__data_console_GetMessageSummaryResponse getMessageSummary(Client__GetMessageSummaryRequest request) throws USpeedoException {
+        public GetMessageSummaryResData getMessageSummary(GetMessageSummaryReq request) throws USpeedoException {
             request.setAction("GetMessageSummary");
-            return (Console__data_console_GetMessageSummaryResponse) this.invoke(request, Console__data_console_GetMessageSummaryResponse.class);
+            return (GetMessageSummaryResData) this.invoke(request, GetMessageSummaryResData.class);
         }
         
         
@@ -95,9 +111,9 @@ public class WhatsAppClient extends DefaultClient implements WhatsAppClientInter
          * @param request Request object
          * @throws USpeedoException Exception
          */
-        public Console__data_console_GetTemplatesResponse getTemplates(Console__getTemplateRequest request) throws USpeedoException {
+        public GetTemplatesResData getTemplates(GetTemplatesReq request) throws USpeedoException {
             request.setAction("GetTemplates");
-            return (Console__data_console_GetTemplatesResponse) this.invoke(request, Console__data_console_GetTemplatesResponse.class);
+            return (GetTemplatesResData) this.invoke(request, GetTemplatesResData.class);
         }
         
         
@@ -111,9 +127,9 @@ public class WhatsAppClient extends DefaultClient implements WhatsAppClientInter
          * @param request Request object
          * @throws USpeedoException Exception
          */
-        public Console__data_console_sendMessageResponse sendWhatsappMessage(Console__sendMessageRequest request) throws USpeedoException {
+        public SendWhatsappMessageResData sendWhatsappMessage(SendWhatsappMessageReq request) throws USpeedoException {
             request.setAction("SendWhatsappMessage");
-            return (Console__data_console_sendMessageResponse) this.invoke(request, Console__data_console_sendMessageResponse.class);
+            return (SendWhatsappMessageResData) this.invoke(request, SendWhatsappMessageResData.class);
         }
         
         
@@ -127,9 +143,9 @@ public class WhatsAppClient extends DefaultClient implements WhatsAppClientInter
          * @param request Request object
          * @throws USpeedoException Exception
          */
-        public Console__data_console_uploadMediaResponse uploadMedia(Console__uploadMediaRequest request) throws USpeedoException {
+        public UploadMediaResData uploadMedia(UploadMediaReq request) throws USpeedoException {
             request.setAction("UploadMedia");
-            return (Console__data_console_uploadMediaResponse) this.invoke(request, Console__data_console_uploadMediaResponse.class);
+            return (UploadMediaResData) this.invoke(request, UploadMediaResData.class);
         }
         
         
@@ -143,9 +159,9 @@ public class WhatsAppClient extends DefaultClient implements WhatsAppClientInter
          * @param request Request object
          * @throws USpeedoException Exception
          */
-        public Common__Empty deleteMedia(Console__deleteMediaRequest request) throws USpeedoException {
+        public Empty deleteMedia(DeleteMediaReq request) throws USpeedoException {
             request.setAction("DeleteMedia");
-            return (Common__Empty) this.invoke(request, Common__Empty.class);
+            return (Empty) this.invoke(request, Empty.class);
         }
         
         
@@ -159,9 +175,9 @@ public class WhatsAppClient extends DefaultClient implements WhatsAppClientInter
          * @param request Request object
          * @throws USpeedoException Exception
          */
-        public Common__Empty deleteTemplate(Console__deleteTemplateRequest request) throws USpeedoException {
+        public Empty deleteTemplate(DeleteTemplateReq request) throws USpeedoException {
             request.setAction("DeleteTemplate");
-            return (Common__Empty) this.invoke(request, Common__Empty.class);
+            return (Empty) this.invoke(request, Empty.class);
         }
         
         
@@ -175,24 +191,8 @@ public class WhatsAppClient extends DefaultClient implements WhatsAppClientInter
          * @param request Request object
          * @throws USpeedoException Exception
          */
-        public Console__data_console_getAccountAppKeyResponse getAccountPhoneList(GetAccountPhoneListRequest request) throws USpeedoException {
+        public GetAccountPhoneListResData getAccountPhoneList(GetAccountPhoneListRequest request) throws USpeedoException {
             request.setAction("GetAccountPhoneList");
-            return (Console__data_console_getAccountAppKeyResponse) this.invoke(request, Console__data_console_getAccountAppKeyResponse.class);
-        }
-        
-        
-        
-        
-        
-        
-        /**
-         * GetMedia - 
-         *
-         * @param request Request object
-         * @throws USpeedoException Exception
-         */
-        public Console__data_console_getMediaResponse getMedia(Console__getMediaRequest request) throws USpeedoException {
-            request.setAction("GetMedia");
-            return (Console__data_console_getMediaResponse) this.invoke(request, Console__data_console_getMediaResponse.class);
+            return (GetAccountPhoneListResData) this.invoke(request, GetAccountPhoneListResData.class);
         }
 }

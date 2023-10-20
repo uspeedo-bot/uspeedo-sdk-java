@@ -149,8 +149,6 @@ public class RequestTest {
         expected.put("UHostIds.1", "uhost-yyy");
         expected.put("NetworkInterface.0.Bandwidth", 42);
         expected.put("Action", "Foo");
-        expected.put("PublicKey", "keyfoobar42==");
-        expected.put("Signature", "sig42==");
 
         try {
             Map<String, Object> result = request.encode();

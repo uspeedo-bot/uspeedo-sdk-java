@@ -23,7 +23,7 @@ import com.uspeedo.common.request.Request;
 import com.uspeedo.common.annotation.NotEmpty;
 import com.uspeedo.common.annotation.USpeedoParam;
 
-public class Action__sendEmailTemplateReq extends Request {
+public class SendEmailTemplateReq extends Request {
 
     
         
@@ -40,7 +40,7 @@ public class Action__sendEmailTemplateReq extends Request {
      */
     @NotEmpty
     @USpeedoParam("EmailContent")
-    private List<Action__TargetEmail> emailContent;
+    private List<TargetEmail> emailContent;
         
     
         
@@ -69,11 +69,11 @@ public class Action__sendEmailTemplateReq extends Request {
         this.accountId = accountId;
     }
     
-    public List<Action__TargetEmail> getEmailContent() {
+    public List<TargetEmail> getEmailContent() {
         return emailContent;
     }
 
-    public void setEmailContent(List<Action__TargetEmail> emailContent) {
+    public void setEmailContent(List<TargetEmail> emailContent) {
         this.emailContent = emailContent;
     }
     
@@ -93,7 +93,7 @@ public class Action__sendEmailTemplateReq extends Request {
         this.templateId = templateId;
     }
     
-        public static class Action__TargetEmail extends Request {
+        public static class TargetEmail extends Request {
             
         
     /**

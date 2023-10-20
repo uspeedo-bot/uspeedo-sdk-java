@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.uspeedo.whatsapp.models;
+package com.uspeedo.asms.models;
 
 import java.util.List;
 
@@ -23,41 +23,39 @@ import com.uspeedo.common.request.Request;
 import com.uspeedo.common.annotation.NotEmpty;
 import com.uspeedo.common.annotation.USpeedoParam;
 
-public class Console__uploadMediaRequest extends Request {
+public class GetUSMSSendReceiptReq extends Request {
 
     
         
     /**
-     * phone number
+     * Account ID,Get accountId reference: https://docs.uspeedo.com/docs/sms/api/
      */
-    @NotEmpty
-    @USpeedoParam("BusinessPhone")
-    private String businessPhone;
+    @USpeedoParam("AccountId")
+    private Integer accountId;
         
     
         
     /**
-     * base64 encoded raw file, without mime type prefix
+     * 
      */
-    @NotEmpty
-    @USpeedoParam("File")
-    private String file;
+    @USpeedoParam("SessionNoSet")
+    private List<String> sessionNoSet;
         
     
-    public String getBusinessPhone() {
-        return businessPhone;
+    public Integer getAccountId() {
+        return accountId;
     }
 
-    public void setBusinessPhone(String businessPhone) {
-        this.businessPhone = businessPhone;
+    public void setAccountId(Integer accountId) {
+        this.accountId = accountId;
     }
     
-    public String getFile() {
-        return file;
+    public List<String> getSessionNoSet() {
+        return sessionNoSet;
     }
 
-    public void setFile(String file) {
-        this.file = file;
+    public void setSessionNoSet(List<String> sessionNoSet) {
+        this.sessionNoSet = sessionNoSet;
     }
     
 }

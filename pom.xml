@@ -7,11 +7,12 @@
     <groupId>com.uspeedo</groupId>
     <artifactId>uspeedo-sdk-java</artifactId>
     <packaging>pom</packaging>
-    <version>1.0.1-release</version>
+    <version>1.1.0-release</version>
     <modules>
         <module>uspeedo-sdk-java-common</module>
-        <module>uspeedo-sdk-java-email</module>
         <module>uspeedo-sdk-java-whatsapp</module>
+        <module>uspeedo-sdk-java-email</module>
+        <module>uspeedo-sdk-java-asms</module>
     </modules>
 
     <name>uspeedo-sdk-java</name>
@@ -52,8 +53,9 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <maven.compiler.source>1.7</maven.compiler.source>
-        <maven.compiler.target>1.7</maven.compiler.target>
+        <maven.compiler.source>18</maven.compiler.source>
+        <maven.compiler.target>18</maven.compiler.target>
+        <java.version>18</java.version>
         <junit.version>4.11</junit.version>
         <httpclient.version>4.5.6</httpclient.version>
         <httpmime.version>4.5.6</httpmime.version>

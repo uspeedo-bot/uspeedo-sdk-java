@@ -23,30 +23,12 @@ import com.uspeedo.common.request.Request;
 import com.uspeedo.common.annotation.NotEmpty;
 import com.uspeedo.common.annotation.USpeedoParam;
 
-public class Console__sendMessageRequest extends Request {
+public class DeleteMediaReq extends Request {
 
     
         
     /**
-     * target phone number
-     */
-    @NotEmpty
-    @USpeedoParam("To")
-    private String to;
-        
-    
-        
-    /**
-     * message type
-     */
-    @NotEmpty
-    @USpeedoParam("Type")
-    private String type;
-        
-    
-        
-    /**
-     * send phone number
+     * phone number
      */
     @NotEmpty
     @USpeedoParam("BusinessPhone")
@@ -55,28 +37,12 @@ public class Console__sendMessageRequest extends Request {
     
         
     /**
-     * message content in json
+     * media id
      */
     @NotEmpty
-    @USpeedoParam("Content")
-    private String content;
+    @USpeedoParam("MediaId")
+    private String mediaId;
         
-    
-    public String getTo() {
-        return to;
-    }
-
-    public void setTo(String to) {
-        this.to = to;
-    }
-    
-    public String getType() {
-        return type;
-    }
-
-    public void setType(String type) {
-        this.type = type;
-    }
     
     public String getBusinessPhone() {
         return businessPhone;
@@ -86,12 +52,12 @@ public class Console__sendMessageRequest extends Request {
         this.businessPhone = businessPhone;
     }
     
-    public String getContent() {
-        return content;
+    public String getMediaId() {
+        return mediaId;
     }
 
-    public void setContent(String content) {
-        this.content = content;
+    public void setMediaId(String mediaId) {
+        this.mediaId = mediaId;
     }
     
 }
