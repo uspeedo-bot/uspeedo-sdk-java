@@ -23,7 +23,7 @@ import com.google.gson.annotations.SerializedName;
 
 import com.uspeedo.common.response.Response;
 
-public class Console__data_console_sendMessageResponse extends Response {
+public class UploadMediaResData extends Response {
 
     
         
@@ -31,33 +31,33 @@ public class Console__data_console_sendMessageResponse extends Response {
      * 
      */
     @SerializedName("Data")
-    private Console__sendMessageResponse data;
+    private UploadMediaRes data;
         
     
-    public Console__sendMessageResponse getData() {
+    public UploadMediaRes getData() {
         return data;
     }
 
-    public void setData(Console__sendMessageResponse data) {
+    public void setData(UploadMediaRes data) {
         this.data = data;
     }
     
-        public static class Console__sendMessageResponse extends Response {
+        public static class UploadMediaRes extends Response {
             
         
     /**
      * 
      */
-    @SerializedName("MessageId")
-    private String messageId;
+    @SerializedName("Id")
+    private String id;
         
     
-    public String getMessageId() {
-        return messageId;
+    public String getId() {
+        return id;
     }
 
-    public void setMessageId(String messageId) {
-        this.messageId = messageId;
+    public void setId(String id) {
+        this.id = id;
     }
     
         }

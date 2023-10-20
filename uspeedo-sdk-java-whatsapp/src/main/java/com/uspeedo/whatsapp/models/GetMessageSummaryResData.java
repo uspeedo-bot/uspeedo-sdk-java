@@ -23,7 +23,7 @@ import com.google.gson.annotations.SerializedName;
 
 import com.uspeedo.common.response.Response;
 
-public class Console__data_console_GetMessageSummaryResponse extends Response {
+public class GetMessageSummaryResData extends Response {
 
     
         
@@ -31,25 +31,33 @@ public class Console__data_console_GetMessageSummaryResponse extends Response {
      * 
      */
     @SerializedName("Data")
-    private Console__GetMessageSummaryResponse data;
+    private GetMessageSummaryRes data;
         
     
-    public Console__GetMessageSummaryResponse getData() {
+    public GetMessageSummaryRes getData() {
         return data;
     }
 
-    public void setData(Console__GetMessageSummaryResponse data) {
+    public void setData(GetMessageSummaryRes data) {
         this.data = data;
     }
     
-        public static class Console__GetMessageSummaryResponse extends Response {
+        public static class GetMessageSummaryRes extends Response {
             
+        
+    /**
+     * total amount of messages
+     */
+    @SerializedName("MsgAmount")
+    private Integer msgAmount;
+        
+    
         
     /**
      * detailed message statistics
      */
     @SerializedName("MsgList")
-    private List<Client__MessageSummary> msgList;
+    private List<MessageSummary> msgList;
         
     
         
@@ -60,19 +68,19 @@ public class Console__data_console_GetMessageSummaryResponse extends Response {
     private Integer msgNum;
         
     
-        
-    /**
-     * total amount of messages
-     */
-    @SerializedName("MsgAmount")
-    private Integer msgAmount;
-        
+    public Integer getMsgAmount() {
+        return msgAmount;
+    }
+
+    public void setMsgAmount(Integer msgAmount) {
+        this.msgAmount = msgAmount;
+    }
     
-    public List<Client__MessageSummary> getMsgList() {
+    public List<MessageSummary> getMsgList() {
         return msgList;
     }
 
-    public void setMsgList(List<Client__MessageSummary> msgList) {
+    public void setMsgList(List<MessageSummary> msgList) {
         this.msgList = msgList;
     }
     
@@ -84,16 +92,8 @@ public class Console__data_console_GetMessageSummaryResponse extends Response {
         this.msgNum = msgNum;
     }
     
-    public Integer getMsgAmount() {
-        return msgAmount;
-    }
-
-    public void setMsgAmount(Integer msgAmount) {
-        this.msgAmount = msgAmount;
-    }
-    
         }
-        public static class Client__MessageSummary extends Response {
+        public static class MessageSummary extends Response {
             
         
     /**

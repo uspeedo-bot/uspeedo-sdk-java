@@ -9,7 +9,7 @@
     </parent>
 
     <modelVersion>4.0.0</modelVersion>
-    <artifactId>uspeedo-sdk-java-whatsapp</artifactId>
+    <artifactId>uspeedo-sdk-java-asms</artifactId>
     <version>1.1.0-release</version>
 
     <dependencies>

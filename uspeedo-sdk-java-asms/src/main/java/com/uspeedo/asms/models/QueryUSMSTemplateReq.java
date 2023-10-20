@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.uspeedo.whatsapp.models;
+package com.uspeedo.asms.models;
 
 import java.util.List;
 
@@ -23,12 +23,12 @@ import com.uspeedo.common.request.Request;
 import com.uspeedo.common.annotation.NotEmpty;
 import com.uspeedo.common.annotation.USpeedoParam;
 
-public class Client__GetMessageSummaryRequest extends Request {
+public class QueryUSMSTemplateReq extends Request {
 
     
         
     /**
-     * 
+     * Account ID,Get accountId reference: https://docs.uspeedo.com/docs/sms/api/
      */
     @USpeedoParam("AccountId")
     private Integer accountId;
@@ -36,18 +36,11 @@ public class Client__GetMessageSummaryRequest extends Request {
     
         
     /**
-     * 
+     * Template ID
      */
-    @USpeedoParam("EndTime")
-    private Integer endTime;
-        
-    
-        
-    /**
-     * 
-     */
-    @USpeedoParam("StartTime")
-    private Integer startTime;
+    @NotEmpty
+    @USpeedoParam("TemplateId")
+    private List<String> templateId;
         
     
     public Integer getAccountId() {
@@ -58,20 +51,12 @@ public class Client__GetMessageSummaryRequest extends Request {
         this.accountId = accountId;
     }
     
-    public Integer getEndTime() {
-        return endTime;
+    public List<String> getTemplateId() {
+        return templateId;
     }
 
-    public void setEndTime(Integer endTime) {
-        this.endTime = endTime;
-    }
-    
-    public Integer getStartTime() {
-        return startTime;
-    }
-
-    public void setStartTime(Integer startTime) {
-        this.startTime = startTime;
+    public void setTemplateId(List<String> templateId) {
+        this.templateId = templateId;
     }
     
 }

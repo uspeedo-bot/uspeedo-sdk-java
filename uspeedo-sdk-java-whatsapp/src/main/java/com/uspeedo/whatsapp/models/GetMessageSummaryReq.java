@@ -23,41 +23,55 @@ import com.uspeedo.common.request.Request;
 import com.uspeedo.common.annotation.NotEmpty;
 import com.uspeedo.common.annotation.USpeedoParam;
 
-public class Console__getMediaRequest extends Request {
+public class GetMessageSummaryReq extends Request {
 
     
         
     /**
-     * phone number
+     * 
      */
-    @NotEmpty
-    @USpeedoParam("BusinessPhone")
-    private String businessPhone;
+    @USpeedoParam("AccountId")
+    private Integer accountId;
         
     
         
     /**
-     * media id
+     * 
      */
-    @NotEmpty
-    @USpeedoParam("MediaId")
-    private String mediaId;
+    @USpeedoParam("EndTime")
+    private Integer endTime;
         
     
-    public String getBusinessPhone() {
-        return businessPhone;
+        
+    /**
+     * 
+     */
+    @USpeedoParam("StartTime")
+    private Integer startTime;
+        
+    
+    public Integer getAccountId() {
+        return accountId;
     }
 
-    public void setBusinessPhone(String businessPhone) {
-        this.businessPhone = businessPhone;
+    public void setAccountId(Integer accountId) {
+        this.accountId = accountId;
     }
     
-    public String getMediaId() {
-        return mediaId;
+    public Integer getEndTime() {
+        return endTime;
     }
 
-    public void setMediaId(String mediaId) {
-        this.mediaId = mediaId;
+    public void setEndTime(Integer endTime) {
+        this.endTime = endTime;
+    }
+    
+    public Integer getStartTime() {
+        return startTime;
+    }
+
+    public void setStartTime(Integer startTime) {
+        this.startTime = startTime;
     }
     
 }
