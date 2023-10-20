@@ -22,8 +22,8 @@ import com.uspeedo.common.exception.USpeedoException;
         
         
         
-import com.uspeedo.email.models.Action__sendEmailTemplateReq;
-import com.uspeedo.email.models.Action__SendEmailTemplateResponse;
+import com.uspeedo.email.models.SendEmailTemplateReq;
+import com.uspeedo.email.models.SendEmailTemplateRes;
 
 /**
  * This client is used to call actions of **Email** service
@@ -44,8 +44,8 @@ public class EmailClient extends DefaultClient implements EmailClientInterface {
          * @param request Request object
          * @throws USpeedoException Exception
          */
-        public Action__SendEmailTemplateResponse sendEmailTemplate(Action__sendEmailTemplateReq request) throws USpeedoException {
+        public SendEmailTemplateRes sendEmailTemplate(SendEmailTemplateReq request) throws USpeedoException {
             request.setAction("SendEmailTemplate");
-            return (Action__SendEmailTemplateResponse) this.invoke(request, Action__SendEmailTemplateResponse.class);
+            return (SendEmailTemplateRes) this.invoke(request, SendEmailTemplateRes.class);
         }
 }

@@ -20,8 +20,8 @@ import com.uspeedo.common.exception.USpeedoException;
         
         
         
-import com.uspeedo.email.models.Action__sendEmailTemplateReq;
-import com.uspeedo.email.models.Action__SendEmailTemplateResponse;
+import com.uspeedo.email.models.SendEmailTemplateReq;
+import com.uspeedo.email.models.SendEmailTemplateRes;
 
 /**
  * This client is used to call actions of **Email** service
@@ -39,5 +39,5 @@ public interface EmailClientInterface extends Client {
      * @param request Request object
      * @throws USpeedoException Exception
      */
-    public Action__SendEmailTemplateResponse sendEmailTemplate(Action__sendEmailTemplateReq request) throws USpeedoException;
+    public SendEmailTemplateRes sendEmailTemplate(SendEmailTemplateReq request) throws USpeedoException;
 }

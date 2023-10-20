@@ -23,7 +23,7 @@ import com.uspeedo.common.request.Request;
 import com.uspeedo.common.annotation.NotEmpty;
 import com.uspeedo.common.annotation.USpeedoParam;
 
-public class Console__deleteTemplateRequest extends Request {
+public class DeleteTemplateReq extends Request {
 
     
         
