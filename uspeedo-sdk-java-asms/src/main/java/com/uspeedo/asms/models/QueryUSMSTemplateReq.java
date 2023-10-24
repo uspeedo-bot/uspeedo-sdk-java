@@ -28,14 +28,6 @@ public class QueryUSMSTemplateReq extends Request {
     
         
     /**
-     * Account ID,Get accountId reference: https://docs.uspeedo.com/docs/sms/api/
-     */
-    @USpeedoParam("AccountId")
-    private Integer accountId;
-        
-    
-        
-    /**
      * Template ID
      */
     @NotEmpty
@@ -43,13 +35,13 @@ public class QueryUSMSTemplateReq extends Request {
     private List<String> templateId;
         
     
-    public Integer getAccountId() {
-        return accountId;
-    }
-
-    public void setAccountId(Integer accountId) {
-        this.accountId = accountId;
-    }
+        
+    /**
+     * Account ID,Get accountId reference: https://docs.uspeedo.com/docs/sms/api/
+     */
+    @USpeedoParam("AccountId")
+    private Integer accountId;
+        
     
     public List<String> getTemplateId() {
         return templateId;
@@ -57,6 +49,14 @@ public class QueryUSMSTemplateReq extends Request {
 
     public void setTemplateId(List<String> templateId) {
         this.templateId = templateId;
+    }
+    
+    public Integer getAccountId() {
+        return accountId;
+    }
+
+    public void setAccountId(Integer accountId) {
+        this.accountId = accountId;
     }
     
 }

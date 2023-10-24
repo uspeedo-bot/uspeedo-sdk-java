@@ -41,7 +41,7 @@ import com.uspeedo.asms.models.QueryUSMSTemplateResp;
         
         
 import com.uspeedo.asms.models.CreateUSMSTemplateReq;
-import com.uspeedo.asms.models.ApplyUSMSTemplateResp;
+import com.uspeedo.asms.models.CreateUSMSTemplateResp;
         
         
         
@@ -116,7 +116,7 @@ public interface AsmsClientInterface extends Client {
      * @param request Request object
      * @throws USpeedoException Exception
      */
-    public ApplyUSMSTemplateResp createUSMSTemplate(CreateUSMSTemplateReq request) throws USpeedoException;
+    public CreateUSMSTemplateResp createUSMSTemplate(CreateUSMSTemplateReq request) throws USpeedoException;
         
         
         

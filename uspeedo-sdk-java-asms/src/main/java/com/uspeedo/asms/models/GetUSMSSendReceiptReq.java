@@ -28,27 +28,19 @@ public class GetUSMSSendReceiptReq extends Request {
     
         
     /**
-     * Account ID,Get accountId reference: https://docs.uspeedo.com/docs/sms/api/
-     */
-    @USpeedoParam("AccountId")
-    private Integer accountId;
-        
-    
-        
-    /**
      * 
      */
     @USpeedoParam("SessionNoSet")
     private List<String> sessionNoSet;
         
     
-    public Integer getAccountId() {
-        return accountId;
-    }
-
-    public void setAccountId(Integer accountId) {
-        this.accountId = accountId;
-    }
+        
+    /**
+     * Account ID,Get accountId reference: https://docs.uspeedo.com/docs/sms/api/
+     */
+    @USpeedoParam("AccountId")
+    private Integer accountId;
+        
     
     public List<String> getSessionNoSet() {
         return sessionNoSet;
@@ -56,6 +48,14 @@ public class GetUSMSSendReceiptReq extends Request {
 
     public void setSessionNoSet(List<String> sessionNoSet) {
         this.sessionNoSet = sessionNoSet;
+    }
+    
+    public Integer getAccountId() {
+        return accountId;
+    }
+
+    public void setAccountId(Integer accountId) {
+        this.accountId = accountId;
     }
     
 }

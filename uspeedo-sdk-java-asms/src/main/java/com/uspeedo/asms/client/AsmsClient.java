@@ -43,7 +43,7 @@ import com.uspeedo.asms.models.QueryUSMSTemplateResp;
         
         
 import com.uspeedo.asms.models.CreateUSMSTemplateReq;
-import com.uspeedo.asms.models.ApplyUSMSTemplateResp;
+import com.uspeedo.asms.models.CreateUSMSTemplateResp;
         
         
         
@@ -133,9 +133,9 @@ public class AsmsClient extends DefaultClient implements AsmsClientInterface {
          * @param request Request object
          * @throws USpeedoException Exception
          */
-        public ApplyUSMSTemplateResp createUSMSTemplate(CreateUSMSTemplateReq request) throws USpeedoException {
+        public CreateUSMSTemplateResp createUSMSTemplate(CreateUSMSTemplateReq request) throws USpeedoException {
             request.setAction("CreateUSMSTemplate");
-            return (ApplyUSMSTemplateResp) this.invoke(request, ApplyUSMSTemplateResp.class);
+            return (CreateUSMSTemplateResp) this.invoke(request, CreateUSMSTemplateResp.class);
         }
         
         
