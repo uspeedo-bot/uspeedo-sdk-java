@@ -28,31 +28,6 @@ public class UpdateUSMSTemplateReq extends Request {
     
         
     /**
-     * 
-     */
-    @USpeedoParam("Template")
-    private String template;
-        
-    
-        
-    /**
-     * 
-     */
-    @NotEmpty
-    @USpeedoParam("TemplateId")
-    private String templateId;
-        
-    
-        
-    /**
-     * 
-     */
-    @USpeedoParam("TemplateName")
-    private String templateName;
-        
-    
-        
-    /**
      * Properties corresponding to template variables
      */
     @USpeedoParam("VariableAttr")
@@ -83,29 +58,30 @@ public class UpdateUSMSTemplateReq extends Request {
     private List<Integer> tags;
         
     
-    public String getTemplate() {
-        return template;
-    }
-
-    public void setTemplate(String template) {
-        this.template = template;
-    }
+        
+    /**
+     * 
+     */
+    @USpeedoParam("Template")
+    private String template;
+        
     
-    public String getTemplateId() {
-        return templateId;
-    }
-
-    public void setTemplateId(String templateId) {
-        this.templateId = templateId;
-    }
+        
+    /**
+     * 
+     */
+    @NotEmpty
+    @USpeedoParam("TemplateId")
+    private String templateId;
+        
     
-    public String getTemplateName() {
-        return templateName;
-    }
-
-    public void setTemplateName(String templateName) {
-        this.templateName = templateName;
-    }
+        
+    /**
+     * 
+     */
+    @USpeedoParam("TemplateName")
+    private String templateName;
+        
     
     public String getVariableAttr() {
         return variableAttr;
@@ -137,6 +113,30 @@ public class UpdateUSMSTemplateReq extends Request {
 
     public void setTags(List<Integer> tags) {
         this.tags = tags;
+    }
+    
+    public String getTemplate() {
+        return template;
+    }
+
+    public void setTemplate(String template) {
+        this.template = template;
+    }
+    
+    public String getTemplateId() {
+        return templateId;
+    }
+
+    public void setTemplateId(String templateId) {
+        this.templateId = templateId;
+    }
+    
+    public String getTemplateName() {
+        return templateName;
+    }
+
+    public void setTemplateName(String templateName) {
+        this.templateName = templateName;
     }
     
 }

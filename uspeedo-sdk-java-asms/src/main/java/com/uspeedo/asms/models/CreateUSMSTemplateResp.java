@@ -23,7 +23,7 @@ import com.google.gson.annotations.SerializedName;
 
 import com.uspeedo.common.response.Response;
 
-public class ApplyUSMSTemplateResp extends Response {
+public class CreateUSMSTemplateResp extends Response {
 
     
         

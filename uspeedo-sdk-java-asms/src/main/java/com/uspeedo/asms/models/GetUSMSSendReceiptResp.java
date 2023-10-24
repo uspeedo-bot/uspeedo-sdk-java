@@ -48,25 +48,17 @@ public class GetUSMSSendReceiptResp extends Response {
     /**
      * 
      */
-    @SerializedName("ReceiptSet")
-    private List<ReceiptPerPhone> receiptSet;
+    @SerializedName("SessionNo")
+    private String sessionNo;
         
     
         
     /**
      * 
      */
-    @SerializedName("SessionNo")
-    private String sessionNo;
+    @SerializedName("ReceiptSet")
+    private List<ReceiptPerPhone> receiptSet;
         
-    
-    public List<ReceiptPerPhone> getReceiptSet() {
-        return receiptSet;
-    }
-
-    public void setReceiptSet(List<ReceiptPerPhone> receiptSet) {
-        this.receiptSet = receiptSet;
-    }
     
     public String getSessionNo() {
         return sessionNo;
@@ -76,33 +68,17 @@ public class GetUSMSSendReceiptResp extends Response {
         this.sessionNo = sessionNo;
     }
     
+    public List<ReceiptPerPhone> getReceiptSet() {
+        return receiptSet;
+    }
+
+    public void setReceiptSet(List<ReceiptPerPhone> receiptSet) {
+        this.receiptSet = receiptSet;
+    }
+    
         }
         public static class ReceiptPerPhone extends Response {
             
-        
-    /**
-     * 
-     */
-    @SerializedName("ReceiptResult")
-    private String receiptResult;
-        
-    
-        
-    /**
-     * 
-     */
-    @SerializedName("ReceiptTime")
-    private Integer receiptTime;
-        
-    
-        
-    /**
-     * 
-     */
-    @SerializedName("UserId")
-    private String userId;
-        
-    
         
     /**
      * 
@@ -143,29 +119,29 @@ public class GetUSMSSendReceiptResp extends Response {
     private String receiptDesc;
         
     
-    public String getReceiptResult() {
-        return receiptResult;
-    }
-
-    public void setReceiptResult(String receiptResult) {
-        this.receiptResult = receiptResult;
-    }
+        
+    /**
+     * 
+     */
+    @SerializedName("ReceiptResult")
+    private String receiptResult;
+        
     
-    public Integer getReceiptTime() {
-        return receiptTime;
-    }
-
-    public void setReceiptTime(Integer receiptTime) {
-        this.receiptTime = receiptTime;
-    }
+        
+    /**
+     * 
+     */
+    @SerializedName("ReceiptTime")
+    private Integer receiptTime;
+        
     
-    public String getUserId() {
-        return userId;
-    }
-
-    public void setUserId(String userId) {
-        this.userId = userId;
-    }
+        
+    /**
+     * 
+     */
+    @SerializedName("UserId")
+    private String userId;
+        
     
     public Integer getAccountId() {
         return accountId;
@@ -205,6 +181,30 @@ public class GetUSMSSendReceiptResp extends Response {
 
     public void setReceiptDesc(String receiptDesc) {
         this.receiptDesc = receiptDesc;
+    }
+    
+    public String getReceiptResult() {
+        return receiptResult;
+    }
+
+    public void setReceiptResult(String receiptResult) {
+        this.receiptResult = receiptResult;
+    }
+    
+    public Integer getReceiptTime() {
+        return receiptTime;
+    }
+
+    public void setReceiptTime(Integer receiptTime) {
+        this.receiptTime = receiptTime;
+    }
+    
+    public String getUserId() {
+        return userId;
+    }
+
+    public void setUserId(String userId) {
+        this.userId = userId;
     }
     
         }

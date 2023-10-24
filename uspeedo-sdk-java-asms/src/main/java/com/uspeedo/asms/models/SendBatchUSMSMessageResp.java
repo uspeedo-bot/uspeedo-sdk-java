@@ -30,8 +30,16 @@ public class SendBatchUSMSMessageResp extends Response {
     /**
      * 
      */
+    @SerializedName("SuccessCount")
+    private Integer successCount;
+        
+    
+        
+    /**
+     * 
+     */
     @SerializedName("FailContent")
-    private List<BatchWithFailure> failContent;
+    private List<SendInfoWithFailure> failContent;
         
     
         
@@ -42,19 +50,19 @@ public class SendBatchUSMSMessageResp extends Response {
     private String sessionNo;
         
     
-        
-    /**
-     * 
-     */
-    @SerializedName("SuccessCount")
-    private Integer successCount;
-        
+    public Integer getSuccessCount() {
+        return successCount;
+    }
+
+    public void setSuccessCount(Integer successCount) {
+        this.successCount = successCount;
+    }
     
-    public List<BatchWithFailure> getFailContent() {
+    public List<SendInfoWithFailure> getFailContent() {
         return failContent;
     }
 
-    public void setFailContent(List<BatchWithFailure> failContent) {
+    public void setFailContent(List<SendInfoWithFailure> failContent) {
         this.failContent = failContent;
     }
     
@@ -66,16 +74,16 @@ public class SendBatchUSMSMessageResp extends Response {
         this.sessionNo = sessionNo;
     }
     
-    public Integer getSuccessCount() {
-        return successCount;
-    }
-
-    public void setSuccessCount(Integer successCount) {
-        this.successCount = successCount;
-    }
-    
-        public static class BatchWithFailure extends Response {
+        public static class SendInfoWithFailure extends Response {
             
+        
+    /**
+     * Template ID
+     */
+    @SerializedName("TemplateId")
+    private String templateId;
+        
+    
         
     /**
      * 
@@ -97,16 +105,16 @@ public class SendBatchUSMSMessageResp extends Response {
      * 
      */
     @SerializedName("Target")
-    private List<TargetPhone> target;
+    private List<TargetPhoneWithFailure> target;
         
     
-        
-    /**
-     * Template ID
-     */
-    @SerializedName("TemplateId")
-    private String templateId;
-        
+    public String getTemplateId() {
+        return templateId;
+    }
+
+    public void setTemplateId(String templateId) {
+        this.templateId = templateId;
+    }
     
     public String getFailureDetails() {
         return failureDetails;
@@ -124,25 +132,25 @@ public class SendBatchUSMSMessageResp extends Response {
         this.senderId = senderId;
     }
     
-    public List<TargetPhone> getTarget() {
+    public List<TargetPhoneWithFailure> getTarget() {
         return target;
     }
 
-    public void setTarget(List<TargetPhone> target) {
+    public void setTarget(List<TargetPhoneWithFailure> target) {
         this.target = target;
     }
     
-    public String getTemplateId() {
-        return templateId;
-    }
-
-    public void setTemplateId(String templateId) {
-        this.templateId = templateId;
-    }
-    
         }
-        public static class TargetPhone extends Response {
+        public static class TargetPhoneWithFailure extends Response {
             
+        
+    /**
+     * 
+     */
+    @SerializedName("Invalid")
+    private Boolean invalid;
+        
+    
         
     /**
      * 
@@ -175,6 +183,22 @@ public class SendBatchUSMSMessageResp extends Response {
     private String extendCode;
         
     
+        
+    /**
+     * 
+     */
+    @SerializedName("FailureDetails")
+    private String failureDetails;
+        
+    
+    public Boolean getInvalid() {
+        return invalid;
+    }
+
+    public void setInvalid(Boolean invalid) {
+        this.invalid = invalid;
+    }
+    
     public String getPhone() {
         return phone;
     }
@@ -205,6 +229,14 @@ public class SendBatchUSMSMessageResp extends Response {
 
     public void setExtendCode(String extendCode) {
         this.extendCode = extendCode;
+    }
+    
+    public String getFailureDetails() {
+        return failureDetails;
+    }
+
+    public void setFailureDetails(String failureDetails) {
+        this.failureDetails = failureDetails;
     }
     
         }

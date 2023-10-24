@@ -48,48 +48,8 @@ public class QueryUSMSTemplateResp extends Response {
     /**
      * 
      */
-    @SerializedName("Status")
-    private Integer status;
-        
-    
-        
-    /**
-     * 
-     */
-    @SerializedName("TemplateId")
-    private String templateId;
-        
-    
-        
-    /**
-     * Properties corresponding to template variables
-     */
-    @SerializedName("Attributes")
-    private List<VariableAttr> attributes;
-        
-    
-        
-    /**
-     * 
-     */
     @SerializedName("CreateTime")
     private Integer createTime;
-        
-    
-        
-    /**
-     * 
-     */
-    @SerializedName("Remark")
-    private String remark;
-        
-    
-        
-    /**
-     * tags
-     */
-    @SerializedName("Tags")
-    private List<Integer> tags;
         
     
         
@@ -102,10 +62,10 @@ public class QueryUSMSTemplateResp extends Response {
     
         
     /**
-     * 
+     * Properties corresponding to template variables
      */
-    @SerializedName("TemplateName")
-    private String templateName;
+    @SerializedName("Attributes")
+    private List<VariableAttr> attributes;
         
     
         
@@ -132,29 +92,45 @@ public class QueryUSMSTemplateResp extends Response {
     private Integer purpose;
         
     
-    public Integer getStatus() {
-        return status;
-    }
-
-    public void setStatus(Integer status) {
-        this.status = status;
-    }
+        
+    /**
+     * 
+     */
+    @SerializedName("Remark")
+    private String remark;
+        
     
-    public String getTemplateId() {
-        return templateId;
-    }
-
-    public void setTemplateId(String templateId) {
-        this.templateId = templateId;
-    }
+        
+    /**
+     * 
+     */
+    @SerializedName("Status")
+    private Integer status;
+        
     
-    public List<VariableAttr> getAttributes() {
-        return attributes;
-    }
-
-    public void setAttributes(List<VariableAttr> attributes) {
-        this.attributes = attributes;
-    }
+        
+    /**
+     * tags
+     */
+    @SerializedName("Tags")
+    private List<Integer> tags;
+        
+    
+        
+    /**
+     * 
+     */
+    @SerializedName("TemplateId")
+    private String templateId;
+        
+    
+        
+    /**
+     * 
+     */
+    @SerializedName("TemplateName")
+    private String templateName;
+        
     
     public Integer getCreateTime() {
         return createTime;
@@ -162,22 +138,6 @@ public class QueryUSMSTemplateResp extends Response {
 
     public void setCreateTime(Integer createTime) {
         this.createTime = createTime;
-    }
-    
-    public String getRemark() {
-        return remark;
-    }
-
-    public void setRemark(String remark) {
-        this.remark = remark;
-    }
-    
-    public List<Integer> getTags() {
-        return tags;
-    }
-
-    public void setTags(List<Integer> tags) {
-        this.tags = tags;
     }
     
     public String getTemplate() {
@@ -188,12 +148,12 @@ public class QueryUSMSTemplateResp extends Response {
         this.template = template;
     }
     
-    public String getTemplateName() {
-        return templateName;
+    public List<VariableAttr> getAttributes() {
+        return attributes;
     }
 
-    public void setTemplateName(String templateName) {
-        this.templateName = templateName;
+    public void setAttributes(List<VariableAttr> attributes) {
+        this.attributes = attributes;
     }
     
     public String getErrDesc() {
@@ -218,6 +178,46 @@ public class QueryUSMSTemplateResp extends Response {
 
     public void setPurpose(Integer purpose) {
         this.purpose = purpose;
+    }
+    
+    public String getRemark() {
+        return remark;
+    }
+
+    public void setRemark(String remark) {
+        this.remark = remark;
+    }
+    
+    public Integer getStatus() {
+        return status;
+    }
+
+    public void setStatus(Integer status) {
+        this.status = status;
+    }
+    
+    public List<Integer> getTags() {
+        return tags;
+    }
+
+    public void setTags(List<Integer> tags) {
+        this.tags = tags;
+    }
+    
+    public String getTemplateId() {
+        return templateId;
+    }
+
+    public void setTemplateId(String templateId) {
+        this.templateId = templateId;
+    }
+    
+    public String getTemplateName() {
+        return templateName;
+    }
+
+    public void setTemplateName(String templateName) {
+        this.templateName = templateName;
     }
     
         }

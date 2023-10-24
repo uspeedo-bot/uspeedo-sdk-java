@@ -30,18 +30,8 @@ public class CreateUSMSTemplateReq extends Request {
     /**
      * 
      */
-    @NotEmpty
-    @USpeedoParam("TemplateName")
-    private String templateName;
-        
-    
-        
-    /**
-     * Verification code: 1 , Notify : 2, sale : 3
-     */
-    @NotEmpty
-    @USpeedoParam("Purpose")
-    private Integer purpose;
+    @USpeedoParam("Remark")
+    private String remark;
         
     
         
@@ -55,6 +45,15 @@ public class CreateUSMSTemplateReq extends Request {
     
         
     /**
+     * 
+     */
+    @NotEmpty
+    @USpeedoParam("TemplateName")
+    private String templateName;
+        
+    
+        
+    /**
      * Account ID,Get accountId reference: https://docs.uspeedo.com/docs/sms/api/
      */
     @USpeedoParam("AccountId")
@@ -63,26 +62,19 @@ public class CreateUSMSTemplateReq extends Request {
     
         
     /**
-     * 
+     * Verification code: 1 , Notify : 2, sale : 3
      */
-    @USpeedoParam("Remark")
-    private String remark;
+    @NotEmpty
+    @USpeedoParam("Purpose")
+    private Integer purpose;
         
     
-    public String getTemplateName() {
-        return templateName;
+    public String getRemark() {
+        return remark;
     }
 
-    public void setTemplateName(String templateName) {
-        this.templateName = templateName;
-    }
-    
-    public Integer getPurpose() {
-        return purpose;
-    }
-
-    public void setPurpose(Integer purpose) {
-        this.purpose = purpose;
+    public void setRemark(String remark) {
+        this.remark = remark;
     }
     
     public String getTemplate() {
@@ -93,6 +85,14 @@ public class CreateUSMSTemplateReq extends Request {
         this.template = template;
     }
     
+    public String getTemplateName() {
+        return templateName;
+    }
+
+    public void setTemplateName(String templateName) {
+        this.templateName = templateName;
+    }
+    
     public Integer getAccountId() {
         return accountId;
     }
@@ -101,12 +101,12 @@ public class CreateUSMSTemplateReq extends Request {
         this.accountId = accountId;
     }
     
-    public String getRemark() {
-        return remark;
+    public Integer getPurpose() {
+        return purpose;
     }
 
-    public void setRemark(String remark) {
-        this.remark = remark;
+    public void setPurpose(Integer purpose) {
+        this.purpose = purpose;
     }
     
 }
