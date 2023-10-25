@@ -107,22 +107,17 @@ public class Request extends RequestOptions {
                 params.put(key, value);
             } else if (isArray(value)) {
                 List<Object> listValue = (List) value;
-                for (int i = 0; i < listValue.size(); i++) {
-                    Object item = listValue.get(i);
+                List<Object> newList = new ArrayList<>();
+                for (Object item : listValue) {
                     if (isObject(item)) {
-                        for (Map.Entry<String, Object> entry : encodeObject(item).entrySet()) {
-                            params.put(
-                                String.format("%s.%d.%s", key, i, entry.getKey()),
-                                entry.getValue());
-                        }
+                        newList.add(encodeObject(item));
                     } else {
-                        params.put(String.format("%s.%d", key, i), item);
+                        newList.add(item);
                     }
                 }
+                params.put(key, newList);
             } else if (isObject(value)) {
-                for (Map.Entry<String, Object> entry : encodeObject(value).entrySet()) {
-                    params.put(String.format("%s.%s", key, entry.getKey()), entry.getValue());
-                }
+                params.put(key, encodeObject(value));
             } else {
                 throw new ClassNotFoundException(
                     "invalid class ".concat(value.getClass().getName()));

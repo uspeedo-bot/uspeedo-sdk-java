@@ -143,11 +143,14 @@ public class RequestTest {
         Map<String, Object> expected = new HashMap<>();
         expected.put("Name", "foo");
         expected.put("Size", 42.0);
-        expected.put("Led.Enabled", true);
+        Map<String, Object> ledMap = new HashMap<>();
+        ledMap.put("Enabled", true);
+        expected.put("Led", ledMap);
         expected.put("CPU", 1);
-        expected.put("UHostIds.0", "uhost-xxx");
-        expected.put("UHostIds.1", "uhost-yyy");
-        expected.put("NetworkInterface.0.Bandwidth", 42);
+        expected.put("UHostIds", Arrays.asList("uhost-xxx","uhost-yyy"));
+        Map<String, Object> networkInterfaceMap = new HashMap<>();
+        networkInterfaceMap.put("Bandwidth", 42);
+        expected.put("NetworkInterface", Collections.singletonList(networkInterfaceMap));
         expected.put("Action", "Foo");
 
         try {

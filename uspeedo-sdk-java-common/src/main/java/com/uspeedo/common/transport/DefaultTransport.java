@@ -44,7 +44,7 @@ public class DefaultTransport implements Transport {
     private static final String HEADER_REQUEST_ID = "X-Speedo-Request-Uuid";
     private static final String HEADER_REQUEST_PUB = "X-Access-Key-Id";
     private static final String HEADER_REQUEST_SIG = "X-Signature";
-    private static final String HEADER_REQUEST_TS = "X-Timestamp";// Request timestamp, NTP error range is within 5 minutes
+    private static final String HEADER_REQUEST_TS = "X-Timestamp"; // Request timestamp, NTP error range is within 5 minutes
     private static final String HEADER_REQUEST_NONCE = "X-Nonce";  // Random MAX len 32 char
 
     private String baseUrl;

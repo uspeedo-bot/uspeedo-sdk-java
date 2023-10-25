@@ -15,14 +15,13 @@ package com.uspeedo.common.credential;
 
 import com.uspeedo.common.exception.USpeedoException;
 import com.uspeedo.common.request.Request;
-
 import org.apache.commons.codec.digest.DigestUtils;
 
 import java.io.UnsupportedEncodingException;
-import java.math.BigDecimal;
 import java.security.NoSuchAlgorithmException;
 import java.text.DecimalFormat;
 import java.util.Arrays;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -31,7 +30,6 @@ import java.util.Map;
 public class Credential {
 
     private String privateKey;
-
     private String publicKey;
 
     /**
@@ -50,28 +48,20 @@ public class Credential {
         String[] keys = params.keySet().toArray(new String[0]);
         Arrays.sort(keys);
 
-        DecimalFormat df = new DecimalFormat("#");
-        df.setMaximumFractionDigits(Integer.MAX_VALUE);
-        String s = "";
-        for (String key : keys) {
-            s = s.concat(key);
-            Object value = params.get(key);
-            String valueStr;
-            if (value instanceof Double || value instanceof Float) {
-                // If the type is double or float, we need to trim the tailing zeros
-                // to be consistent with the json decoder.
-                valueStr = df.format(value);
-            } else {
-                valueStr = value.toString();
-            }
-            s = s.concat(valueStr);
-        }
-        s = s.concat(this.privateKey);
-
         try {
-            return sha1(s);
+            DecimalFormat df = new DecimalFormat("#");
+            df.setMaximumFractionDigits(Integer.MAX_VALUE);
+            StringBuilder concatenatedString = new StringBuilder();
+
+            for (String key : keys) {
+                concatenatedString.append(key)
+                    .append(any2String(params.get(key)));
+            }
+            concatenatedString.append(privateKey);
+
+            return sha1(concatenatedString.toString());
         } catch (NoSuchAlgorithmException | UnsupportedEncodingException e) {
-            throw new USpeedoException("sha1 error", e);
+            throw new USpeedoException("SHA-1 error", e);
         }
     }
 
@@ -98,7 +88,51 @@ public class Credential {
         this.publicKey = publicKey;
     }
 
+    private String any2String(Object v) {
+        if (v instanceof String || v instanceof Boolean || v instanceof Number) {
+            return simple2String(v);
+        } else if (v instanceof List) {
+            return slice2String((List<?>) v);
+        } else if (v instanceof Map) {
+            return map2String((Map<String, Object>) v);
+        } else {
+            return v.toString();
+        }
+    }
+
+    public static String simple2String(Object v) {
+        if (v instanceof Boolean) {
+            return Boolean.toString((Boolean) v);
+        } else {
+            return String.valueOf(v);
+        }
+    }
+
+    private String slice2String(List<?> arr) {
+        StringBuilder str = new StringBuilder();
+        for (Object v : arr) {
+            str.append(any2String(v));
+        }
+        return str.toString();
+    }
+
+    public static String[] extractKeys(Map<String, Object> m) {
+        String[] keys = m.keySet().toArray(new String[0]);
+        Arrays.sort(keys);
+
+        return keys;
+    }
+
+    private String map2String(Map<String, Object> params) {
+        StringBuilder str = new StringBuilder();
+        for (String k : extractKeys(params)) {
+            str.append(k).append(any2String(params.get(k)));
+        }
+        return str.toString();
+    }
+
     private String sha1(String s) throws NoSuchAlgorithmException, UnsupportedEncodingException {
+        // Security Consideration: SHA-1 is deprecated for cryptographic use; consider using a more secure algorithm.
         return formatBytes2HexString(DigestUtils.sha1(s));
     }
 
