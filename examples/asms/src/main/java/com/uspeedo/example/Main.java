@@ -50,7 +50,7 @@ public class Main {
         createUSMSTemplateReq.setRemark("this is a test template");
         createUSMSTemplateReq.setTemplateName("test template");
         try {
-            ApplyUSMSTemplateResp createUSMSTemplateResp = asmsClient.createUSMSTemplate(createUSMSTemplateReq);
+            CreateUSMSTemplateResp createUSMSTemplateResp = asmsClient.createUSMSTemplate(createUSMSTemplateReq);
             System.out.println(createUSMSTemplateResp);
         } catch (USpeedoException e) {
             System.out.println(e.getMessage());
