@@ -22,9 +22,9 @@ public class Main {
                 System.getenv("USpeedo_PUBLIC_KEY"), System.getenv("USpeedo_PRIVATE_KEY"));
         WhatsAppClient client = new WhatsAppClient(config, credential);
 
-        Client__GetMessageSummaryRequest getMessageSummaryRequest = new Client__GetMessageSummaryRequest();
+        GetMessageSummaryReq getMessageSummaryRequest = new GetMessageSummaryReq();
 
-        Console__data_console_GetMessageSummaryResponse getMessageSummaryResponse = null;
+        GetMessageSummaryResData getMessageSummaryResponse = null;
         try {
             getMessageSummaryResponse = client.getMessageSummary(getMessageSummaryRequest);
         } catch (RetCodeException e) {
