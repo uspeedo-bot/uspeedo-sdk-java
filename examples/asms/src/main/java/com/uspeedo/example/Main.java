@@ -15,7 +15,7 @@ import java.util.Collections;
 public class Main {
     private static final Logger logger = LoggerFactory.getLogger(Main.class);
 
-    public static void invokeSendMessage() {
+    public static void invokeSendMessage() throws USpeedoException {
         AsmsClient asmsClient = getClient();
 
         SendBatchUSMSMessageReq req = new SendBatchUSMSMessageReq();
@@ -40,7 +40,7 @@ public class Main {
         }
     }
 
-    public static void invokeTemplateAPi() {
+    public static void invokeTemplateAPi() throws USpeedoException {
         AsmsClient asmsClient = getClient();
 
         // Create Template
@@ -95,17 +95,22 @@ public class Main {
         }
     }
 
-    public static AsmsClient getClient() {
+    public static AsmsClient getClient() throws USpeedoException {
         Config config = new Config();
         config.setLogger(logger);
 
         String publicKey = System.getenv("USpeedo_PUBLIC_KEY");
         String privateKey = System.getenv("USpeedo_PRIVATE_KEY");
+
+        if (publicKey == null || privateKey == null) {
+            throw new USpeedoException("Environment variables USpeedo_PUBLIC_KEY and/or USpeedo_PRIVATE_KEY are not set");
+        }
+
         Credential credential = new Credential(publicKey, privateKey);
         return new AsmsClient(config, credential);
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws USpeedoException {
 //        invokeTemplateAPi();
         invokeSendMessage();
     }

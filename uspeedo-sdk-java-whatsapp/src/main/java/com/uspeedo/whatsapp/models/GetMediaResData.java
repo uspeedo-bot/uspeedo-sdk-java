@@ -42,8 +42,8 @@ public class GetMediaResData extends Response {
         this.data = data;
     }
     
-        public static class GetMediaRes extends Response {
-            
+    public static class GetMediaRes extends Response {
+        
         
     /**
      * 
@@ -92,7 +92,7 @@ public class GetMediaResData extends Response {
         this.url = url;
     }
     
-        }
+    }
 }
 
 

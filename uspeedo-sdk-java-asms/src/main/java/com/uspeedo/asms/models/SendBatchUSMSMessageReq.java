@@ -59,8 +59,8 @@ public class SendBatchUSMSMessageReq extends Request {
         this.taskContent = taskContent;
     }
     
-        public static class SendInfo extends Request {
-            
+    public static class SendInfo extends Request {
+        
         
     /**
      * Sender Name is basically used to identify the sender of the bulk SMS message.
@@ -109,9 +109,9 @@ public class SendBatchUSMSMessageReq extends Request {
         this.templateId = templateId;
     }
     
-        }
-        public static class TargetPhone extends Request {
-            
+    }
+    public static class TargetPhone extends Request {
+        
         
     /**
      * 
@@ -176,7 +176,7 @@ public class SendBatchUSMSMessageReq extends Request {
         this.extendCode = extendCode;
     }
     
-        }
+    }
 }
 
 
