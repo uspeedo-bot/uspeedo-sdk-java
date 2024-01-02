@@ -17,9 +17,15 @@ public class Main {
         Config config = new Config();
 
         config.setLogger(logger);
-        Credential credential =
-            new Credential(
-                System.getenv("USpeedo_PUBLIC_KEY"), System.getenv("USpeedo_PRIVATE_KEY"));
+        String publicKey = System.getenv("USpeedo_PUBLIC_KEY");
+        String privateKey = System.getenv("USpeedo_PRIVATE_KEY");
+
+        if (publicKey == null || privateKey == null) {
+            logger.error("Environment variables USpeedo_PUBLIC_KEY and/or USpeedo_PRIVATE_KEY are not set");
+            return;
+        }
+
+        Credential credential = new Credential(publicKey, privateKey);
         WhatsAppClient client = new WhatsAppClient(config, credential);
 
         GetMessageSummaryReq getMessageSummaryRequest = new GetMessageSummaryReq();
@@ -28,10 +34,15 @@ public class Main {
         try {
             getMessageSummaryResponse = client.getMessageSummary(getMessageSummaryRequest);
         } catch (RetCodeException e) {
-            System.out.println(e.getRetCode());
-
+            logger.error("RetCodeException occurred: {}", e.getRetCode());
+            return;
         } catch (USpeedoException e) {
-            e.printStackTrace();
+            logger.error("USpeedoException occurred", e);
+            return;
+        }
+
+        if (getMessageSummaryResponse == null || getMessageSummaryResponse.getData() == null) {
+            logger.error("getMessageSummaryResponse or getMessageSummaryResponse.getData() is null");
             return;
         }
 

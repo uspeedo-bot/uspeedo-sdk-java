@@ -46,12 +46,12 @@ import com.uspeedo.whatsapp.models.UploadMediaResData;
         
         
 import com.uspeedo.whatsapp.models.DeleteMediaReq;
-import com.uspeedo.whatsapp.models.Empty;
+import com.uspeedo.whatsapp.models.DeleteMediaRes;
         
         
         
 import com.uspeedo.whatsapp.models.DeleteTemplateReq;
-import com.uspeedo.whatsapp.models.Empty;
+import com.uspeedo.whatsapp.models.DeleteTemplateRes;
         
         
         
@@ -139,7 +139,7 @@ public interface WhatsAppClientInterface extends Client {
      * @param request Request object
      * @throws USpeedoException Exception
      */
-    public Empty deleteMedia(DeleteMediaReq request) throws USpeedoException;
+    public DeleteMediaRes deleteMedia(DeleteMediaReq request) throws USpeedoException;
         
         
         
@@ -152,7 +152,7 @@ public interface WhatsAppClientInterface extends Client {
      * @param request Request object
      * @throws USpeedoException Exception
      */
-    public Empty deleteTemplate(DeleteTemplateReq request) throws USpeedoException;
+    public DeleteTemplateRes deleteTemplate(DeleteTemplateReq request) throws USpeedoException;
         
         
         

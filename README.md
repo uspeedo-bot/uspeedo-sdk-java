@@ -1,6 +1,6 @@
 # USpeedo SDK Java
 
-[![Maven](https://img.shields.io/maven-central/v/com.uspeedo/uspeedo-sdk-java.svg?label=Maven)](https://search.maven.org/search?q=g:%22software.amazon.awssdk%22%20AND%20a:%22s3%22)
+[![Maven](https://img.shields.io/maven-central/v/com.uspeedo/uspeedo-sdk-java.svg?label=Maven)](https://central.sonatype.com/search?q=com.uspeedo&smo=true)
 [![Apache 2 License](https://img.shields.io/packagist/l/aws/aws-sdk-php.svg?style=flat)](http://aws.amazon.com/apache-2-0/)
 
 ## English Guide

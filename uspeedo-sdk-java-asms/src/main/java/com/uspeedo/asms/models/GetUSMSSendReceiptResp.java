@@ -42,8 +42,8 @@ public class GetUSMSSendReceiptResp extends Response {
         this.data = data;
     }
     
-        public static class ReceiptPerSession extends Response {
-            
+    public static class ReceiptPerSession extends Response {
+        
         
     /**
      * 
@@ -76,9 +76,9 @@ public class GetUSMSSendReceiptResp extends Response {
         this.receiptSet = receiptSet;
     }
     
-        }
-        public static class ReceiptPerPhone extends Response {
-            
+    }
+    public static class ReceiptPerPhone extends Response {
+        
         
     /**
      * 
@@ -207,7 +207,7 @@ public class GetUSMSSendReceiptResp extends Response {
         this.userId = userId;
     }
     
-        }
+    }
 }
 
 

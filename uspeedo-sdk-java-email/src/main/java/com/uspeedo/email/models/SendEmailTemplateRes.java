@@ -74,8 +74,8 @@ public class SendEmailTemplateRes extends Response {
         this.failContent = failContent;
     }
     
-        public static class FailedTargetEmail extends Response {
-            
+    public static class FailedTargetEmail extends Response {
+        
         
     /**
      * 
@@ -124,7 +124,7 @@ public class SendEmailTemplateRes extends Response {
         this.templateVariableParams = templateVariableParams;
     }
     
-        }
+    }
 }
 
 

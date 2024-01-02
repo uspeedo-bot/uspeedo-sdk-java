@@ -93,8 +93,8 @@ public class SendEmailTemplateReq extends Request {
         this.templateId = templateId;
     }
     
-        public static class TargetEmail extends Request {
-            
+    public static class TargetEmail extends Request {
+        
         
     /**
      * 
@@ -127,7 +127,7 @@ public class SendEmailTemplateReq extends Request {
         this.templateVariableParams = templateVariableParams;
     }
     
-        }
+    }
 }
 
 

@@ -42,8 +42,161 @@ public class GetTemplatesResData extends Response {
         this.data = data;
     }
     
-        public static class TemplateComponent extends Response {
-            
+    public static class TemplateAttribute extends Response {
+        
+        
+    /**
+     * named variable map with 1、2
+     */
+    @SerializedName("NamedVar")
+    private List<String> namedVar;
+        
+    
+        
+    /**
+     * component item type
+     */
+    @SerializedName("Type")
+    private String type;
+        
+    
+    public List<String> getNamedVar() {
+        return namedVar;
+    }
+
+    public void setNamedVar(List<String> namedVar) {
+        this.namedVar = namedVar;
+    }
+    
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+    
+    }
+    public static class GetTemplatesRes extends Response {
+        
+        
+    /**
+     * 
+     */
+    @SerializedName("Data")
+    private List<TemplateInfo> data;
+        
+    
+        
+    /**
+     * 
+     */
+    @SerializedName("Paging")
+    private GetTemplatesPaging paging;
+        
+    
+    public List<TemplateInfo> getData() {
+        return data;
+    }
+
+    public void setData(List<TemplateInfo> data) {
+        this.data = data;
+    }
+    
+    public GetTemplatesPaging getPaging() {
+        return paging;
+    }
+
+    public void setPaging(GetTemplatesPaging paging) {
+        this.paging = paging;
+    }
+    
+    }
+    public static class TemplateComponentButton extends Response {
+        
+        
+    /**
+     * 
+     */
+    @SerializedName("PhoneNumber")
+    private String phoneNumber;
+        
+    
+        
+    /**
+     * 
+     */
+    @SerializedName("Text")
+    private String text;
+        
+    
+        
+    /**
+     * 
+     */
+    @SerializedName("Type")
+    private String type;
+        
+    
+        
+    /**
+     * 
+     */
+    @SerializedName("URL")
+    private String url;
+        
+    
+        
+    /**
+     * 
+     */
+    @SerializedName("Example")
+    private List<String> example;
+        
+    
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
+    
+    public String getText() {
+        return text;
+    }
+
+    public void setText(String text) {
+        this.text = text;
+    }
+    
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+    
+    public String getURL() {
+        return url;
+    }
+
+    public void setURL(String url) {
+        this.url = url;
+    }
+    
+    public List<String> getExample() {
+        return example;
+    }
+
+    public void setExample(List<String> example) {
+        this.example = example;
+    }
+    
+    }
+    public static class TemplateComponent extends Response {
+        
         
     /**
      * 
@@ -124,9 +277,60 @@ public class GetTemplatesResData extends Response {
         this.buttons = buttons;
     }
     
-        }
-        public static class TemplateInfo extends Response {
-            
+    }
+    public static class GetTemplatesPaging extends Response {
+        
+        
+    /**
+     * 
+     */
+    @SerializedName("Cursors")
+    private GetTemplatesCursors cursors;
+        
+    
+        
+    /**
+     * 
+     */
+    @SerializedName("Next")
+    private String next;
+        
+    
+        
+    /**
+     * 
+     */
+    @SerializedName("Previous")
+    private String previous;
+        
+    
+    public GetTemplatesCursors getCursors() {
+        return cursors;
+    }
+
+    public void setCursors(GetTemplatesCursors cursors) {
+        this.cursors = cursors;
+    }
+    
+    public String getNext() {
+        return next;
+    }
+
+    public void setNext(String next) {
+        this.next = next;
+    }
+    
+    public String getPrevious() {
+        return previous;
+    }
+
+    public void setPrevious(String previous) {
+        this.previous = previous;
+    }
+    
+    }
+    public static class TemplateInfo extends Response {
+        
         
     /**
      * 
@@ -287,127 +491,9 @@ public class GetTemplatesResData extends Response {
         this.rejectedReason = rejectedReason;
     }
     
-        }
-        public static class TemplateComponentButton extends Response {
-            
-        
-    /**
-     * 
-     */
-    @SerializedName("PhoneNumber")
-    private String phoneNumber;
-        
-    
-        
-    /**
-     * 
-     */
-    @SerializedName("Text")
-    private String text;
-        
-    
-        
-    /**
-     * 
-     */
-    @SerializedName("Type")
-    private String type;
-        
-    
-        
-    /**
-     * 
-     */
-    @SerializedName("URL")
-    private String url;
-        
-    
-        
-    /**
-     * 
-     */
-    @SerializedName("Example")
-    private List<String> example;
-        
-    
-    public String getPhoneNumber() {
-        return phoneNumber;
     }
-
-    public void setPhoneNumber(String phoneNumber) {
-        this.phoneNumber = phoneNumber;
-    }
-    
-    public String getText() {
-        return text;
-    }
-
-    public void setText(String text) {
-        this.text = text;
-    }
-    
-    public String getType() {
-        return type;
-    }
-
-    public void setType(String type) {
-        this.type = type;
-    }
-    
-    public String getURL() {
-        return url;
-    }
-
-    public void setURL(String url) {
-        this.url = url;
-    }
-    
-    public List<String> getExample() {
-        return example;
-    }
-
-    public void setExample(List<String> example) {
-        this.example = example;
-    }
-    
-        }
-        public static class TemplateAttribute extends Response {
-            
+    public static class TemplateComponentExample extends Response {
         
-    /**
-     * named variable map with 1、2
-     */
-    @SerializedName("NamedVar")
-    private List<String> namedVar;
-        
-    
-        
-    /**
-     * component item type
-     */
-    @SerializedName("Type")
-    private String type;
-        
-    
-    public List<String> getNamedVar() {
-        return namedVar;
-    }
-
-    public void setNamedVar(List<String> namedVar) {
-        this.namedVar = namedVar;
-    }
-    
-    public String getType() {
-        return type;
-    }
-
-    public void setType(String type) {
-        this.type = type;
-    }
-    
-        }
-        public static class TemplateComponentExample extends Response {
-            
         
     /**
      * 
@@ -456,79 +542,9 @@ public class GetTemplatesResData extends Response {
         this.headerText = headerText;
     }
     
-        }
-        public static class GetTemplatesPaging extends Response {
-            
-        
-    /**
-     * 
-     */
-    @SerializedName("Cursors")
-    private GetTemplatesCursors cursors;
-        
-    
-        
-    /**
-     * 
-     */
-    @SerializedName("Next")
-    private String next;
-        
-    
-        
-    /**
-     * 
-     */
-    @SerializedName("Previous")
-    private String previous;
-        
-    
-    public GetTemplatesCursors getCursors() {
-        return cursors;
     }
-
-    public void setCursors(GetTemplatesCursors cursors) {
-        this.cursors = cursors;
-    }
-    
-    public String getNext() {
-        return next;
-    }
-
-    public void setNext(String next) {
-        this.next = next;
-    }
-    
-    public String getPrevious() {
-        return previous;
-    }
-
-    public void setPrevious(String previous) {
-        this.previous = previous;
-    }
-    
-        }
-        public static class TemplateQualityScore extends Response {
-            
+    public static class GetTemplatesCursors extends Response {
         
-    /**
-     * 
-     */
-    @SerializedName("Score")
-    private String score;
-        
-    
-    public String getScore() {
-        return score;
-    }
-
-    public void setScore(String score) {
-        this.score = score;
-    }
-    
-        }
-        public static class GetTemplatesCursors extends Response {
-            
         
     /**
      * 
@@ -561,42 +577,26 @@ public class GetTemplatesResData extends Response {
         this.before = before;
     }
     
-        }
-        public static class GetTemplatesRes extends Response {
-            
+    }
+    public static class TemplateQualityScore extends Response {
+        
         
     /**
      * 
      */
-    @SerializedName("Data")
-    private List<TemplateInfo> data;
+    @SerializedName("Score")
+    private String score;
         
     
-        
-    /**
-     * 
-     */
-    @SerializedName("Paging")
-    private GetTemplatesPaging paging;
-        
-    
-    public List<TemplateInfo> getData() {
-        return data;
+    public String getScore() {
+        return score;
     }
 
-    public void setData(List<TemplateInfo> data) {
-        this.data = data;
+    public void setScore(String score) {
+        this.score = score;
     }
     
-    public GetTemplatesPaging getPaging() {
-        return paging;
     }
-
-    public void setPaging(GetTemplatesPaging paging) {
-        this.paging = paging;
-    }
-    
-        }
 }
 
 

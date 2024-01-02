@@ -42,8 +42,8 @@ public class GetAccountPhoneListResData extends Response {
         this.data = data;
     }
     
-        public static class GetAccountPhoneListRes extends Response {
-            
+    public static class GetAccountPhoneListRes extends Response {
+        
         
     /**
      * 
@@ -60,9 +60,9 @@ public class GetAccountPhoneListResData extends Response {
         this.phoneList = phoneList;
     }
     
-        }
-        public static class GetAccountPhoneListResItem extends Response {
-            
+    }
+    public static class GetAccountPhoneListResItem extends Response {
+        
         
     /**
      * 
@@ -159,7 +159,7 @@ public class GetAccountPhoneListResData extends Response {
         this.status = status;
     }
     
-        }
+    }
 }
 
 

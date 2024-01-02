@@ -42,8 +42,8 @@ public class QueryUSMSTemplateResp extends Response {
         this.data = data;
     }
     
-        public static class OutTemplate extends Response {
-            
+    public static class OutTemplate extends Response {
+        
         
     /**
      * 
@@ -220,9 +220,9 @@ public class QueryUSMSTemplateResp extends Response {
         this.templateName = templateName;
     }
     
-        }
-        public static class VariableAttr extends Response {
-            
+    }
+    public static class VariableAttr extends Response {
+        
         
     /**
      * 模版参数对应的属性，如果没有属性，则为空
@@ -271,7 +271,7 @@ public class QueryUSMSTemplateResp extends Response {
         this.variable = variable;
     }
     
-        }
+    }
 }
 
 

@@ -42,59 +42,8 @@ public class GetMessageSummaryResData extends Response {
         this.data = data;
     }
     
-        public static class GetMessageSummaryRes extends Response {
-            
+    public static class MessageSummary extends Response {
         
-    /**
-     * total amount of messages
-     */
-    @SerializedName("MsgAmount")
-    private Integer msgAmount;
-        
-    
-        
-    /**
-     * detailed message statistics
-     */
-    @SerializedName("MsgList")
-    private List<MessageSummary> msgList;
-        
-    
-        
-    /**
-     * total number of messages
-     */
-    @SerializedName("MsgNum")
-    private Integer msgNum;
-        
-    
-    public Integer getMsgAmount() {
-        return msgAmount;
-    }
-
-    public void setMsgAmount(Integer msgAmount) {
-        this.msgAmount = msgAmount;
-    }
-    
-    public List<MessageSummary> getMsgList() {
-        return msgList;
-    }
-
-    public void setMsgList(List<MessageSummary> msgList) {
-        this.msgList = msgList;
-    }
-    
-    public Integer getMsgNum() {
-        return msgNum;
-    }
-
-    public void setMsgNum(Integer msgNum) {
-        this.msgNum = msgNum;
-    }
-    
-        }
-        public static class MessageSummary extends Response {
-            
         
     /**
      * 
@@ -159,7 +108,58 @@ public class GetMessageSummaryResData extends Response {
         this.country = country;
     }
     
-        }
+    }
+    public static class GetMessageSummaryRes extends Response {
+        
+        
+    /**
+     * total amount of messages
+     */
+    @SerializedName("MsgAmount")
+    private Integer msgAmount;
+        
+    
+        
+    /**
+     * detailed message statistics
+     */
+    @SerializedName("MsgList")
+    private List<MessageSummary> msgList;
+        
+    
+        
+    /**
+     * total number of messages
+     */
+    @SerializedName("MsgNum")
+    private Integer msgNum;
+        
+    
+    public Integer getMsgAmount() {
+        return msgAmount;
+    }
+
+    public void setMsgAmount(Integer msgAmount) {
+        this.msgAmount = msgAmount;
+    }
+    
+    public List<MessageSummary> getMsgList() {
+        return msgList;
+    }
+
+    public void setMsgList(List<MessageSummary> msgList) {
+        this.msgList = msgList;
+    }
+    
+    public Integer getMsgNum() {
+        return msgNum;
+    }
+
+    public void setMsgNum(Integer msgNum) {
+        this.msgNum = msgNum;
+    }
+    
+    }
 }
 
 

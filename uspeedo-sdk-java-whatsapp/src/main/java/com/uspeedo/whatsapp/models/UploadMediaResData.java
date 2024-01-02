@@ -42,8 +42,8 @@ public class UploadMediaResData extends Response {
         this.data = data;
     }
     
-        public static class UploadMediaRes extends Response {
-            
+    public static class UploadMediaRes extends Response {
+        
         
     /**
      * 
@@ -60,7 +60,7 @@ public class UploadMediaResData extends Response {
         this.id = id;
     }
     
-        }
+    }
 }
 
 

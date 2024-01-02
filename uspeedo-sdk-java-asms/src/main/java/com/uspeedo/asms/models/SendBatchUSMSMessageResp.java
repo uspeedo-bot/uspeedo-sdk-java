@@ -74,8 +74,8 @@ public class SendBatchUSMSMessageResp extends Response {
         this.sessionNo = sessionNo;
     }
     
-        public static class SendInfoWithFailure extends Response {
-            
+    public static class SendInfoWithFailure extends Response {
+        
         
     /**
      * Template ID
@@ -140,9 +140,9 @@ public class SendBatchUSMSMessageResp extends Response {
         this.target = target;
     }
     
-        }
-        public static class TargetPhoneWithFailure extends Response {
-            
+    }
+    public static class TargetPhoneWithFailure extends Response {
+        
         
     /**
      * 
@@ -239,7 +239,7 @@ public class SendBatchUSMSMessageResp extends Response {
         this.failureDetails = failureDetails;
     }
     
-        }
+    }
 }
 
 

@@ -42,8 +42,8 @@ public class SendWhatsappMessageResData extends Response {
         this.data = data;
     }
     
-        public static class SendWhatsappMessageRes extends Response {
-            
+    public static class SendWhatsappMessageRes extends Response {
+        
         
     /**
      * 
@@ -60,7 +60,7 @@ public class SendWhatsappMessageResData extends Response {
         this.messageId = messageId;
     }
     
-        }
+    }
 }
 
 
